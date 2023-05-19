@@ -1,0 +1,491 @@
+@font-face {
+  font-family: HelveticaNeue;
+  font-display: swap;
+  src: url("../fonts/HelveticaNeue- Bold.woff2") format("woff2"), url("../fonts/HelveticaNeue- Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFCompactText;
+  font-display: swap;
+  src: url("../fonts/SFCompactText-Light.woff2") format("woff2"), url("../fonts/SFCompactText-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Heavy.woff2") format("woff2"), url("../fonts/SFProDisplay-Heavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"), url("../fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2"), url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: PlayfairDisplay;
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFProText;
+  font-display: swap;
+  src: url("../fonts/SFProText-Regular.woff2") format("woff2"), url("../fonts/SFProText-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: SFCompactText;
+  font-display: swap;
+  src: url("../fonts/SFCompactText-Regular.woff2") format("woff2"), url("../fonts/SFCompactText-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "SFProDisplay";
+  background-color: darksalmon;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+:root {
+  --green-color: #73AFBA;
+  --dark-color: #1C2E3D;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-screen {
+  flex: 1 0 100%;
+  position: relative;
+}
+
+.main-screen__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.container {
+  max-width: 1599px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.menu__burger {
+  position: relative;
+  width: 48px;
+  height: 10px;
+}
+
+.menu__burger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.menu__burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.header__wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 53px;
+}
+
+.header__social {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+.header__logo {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.header__logo:hover {
+  color: var(--green-color);
+}
+
+.header__main {
+  color: #FFFFFF;
+}
+
+.header__main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header__main__new-book {
+  font-size: 11px;
+  line-height: 13px;
+  background-color: rgba(28, 46, 61, 0.4);
+  border-radius: 24px;
+  letter-spacing: 2px;
+  max-width: 132px;
+  padding: 18px 30px;
+}
+
+.header__main__title {
+  font-size: 80px;
+  line-height: 84px;
+  max-width: 550px;
+}
+
+.header__main__sub-title {
+  max-width: 501px;
+  font-family: "SFCompactText";
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+
+.header__main__button {
+  max-width: 274px;
+  height: 80px;
+  background: #E8594E;
+  border-radius: 8px;
+  color: #FFFFFF;
+  border: none;
+}
+
+.header__form {
+  display: flex;
+  align-items: flex-end;
+  flex: 0 0 auto;
+  height: 80px;
+  width: 100%;
+}
+
+.search-form {
+  max-width: 1066px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: relative;
+}
+
+.search-form__field {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 56px;
+  padding-right: 90px;
+  border-top-left-radius: 4px;
+  color: var(--dark-color);
+}
+
+.search-form__button {
+  position: absolute;
+  right: 62px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: none;
+  outline: none;
+  background-image: url("../img/search.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+}
+
+.main-slider {
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 0;
+}
+
+.main-slider__text {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green-color);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2.18182px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1180px) {
+  .header__main-wrapper {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header__main__title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header__main {
+    padding-top: 10px;
+  }
+
+  .header__main-wrapper {
+    gap: 10px;
+  }
+
+  .header__main__new-book {
+    max-width: 100px;
+    padding: 5px 10px;
+  }
+
+  .header__main__title {
+    max-width: 100%;
+    font-size: 50px;
+    line-height: 40px;
+  }
+
+  .header__main__sub-title {
+    margin: 0;
+  }
+
+  .header__main__button {
+    height: 40px;
+    max-width: 150px;
+  }
+
+  .search-form {
+    height: 50%;
+  }
+
+  .search-form__field {
+    padding-left: 20px;
+  }
+
+  .search-form__field {
+    padding-right: 10px;
+    height: 40px;
+  }
+
+  .search-form__button {
+    right: 20px;
+  }
+
+  .main-slider {
+    overflow: visible;
+  }
+
+  .main-slider__text {
+    height: 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__main__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .header__main__sub-title {
+    max-width: 301px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header__form {
+    flex-direction: column-reverse;
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+}
